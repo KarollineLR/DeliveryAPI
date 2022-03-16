@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DeliveryAPI.Models.Pedidos>
+
+@{
+    ViewData["Title"] = "Registros";
+}
+
+<h1>Gerenciamento de dados</h1>
+
+<p>
+    <a asp-action="Create">Criar novo registro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                R$@Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Ver Mais</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

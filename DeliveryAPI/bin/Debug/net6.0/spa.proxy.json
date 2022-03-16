@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "",
+"LaunchCommand": "",
+"WorkingDirectory": "C:\\desenvolvimento\\API\\DeliveryAPI\\DeliveryAPI",
+"MaxTimeoutInSeconds": "120"
+}
+}
